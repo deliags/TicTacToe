@@ -1,0 +1,79 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+:root{
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size));
+  --font-backup: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+  margin: 0;
+  font-family: 'Fredoka', var(--font-backup);
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.player-title{
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  position:relative;
+}
+
+.board{
+  display:grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell{
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: black;
+  border: 2px solid white;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell.o::before,
+.cell.o::after {
+  content:'';
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cell.o::before{
+  width: calc(var(--mark-size) *0.8);
+  height: calc(var(--mark-size) *0.8);
+}
+
+.cell.x::before,
+.cell.x::after {
+  content:'';
+  position: absolute;
+  width: calc(var(--mark-size) *0.15);
+  height: var(--mark-size);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.cell.x::before{
+  transform: rotate(45deg);
+}
+
+.cell.x::after{
+  transform: rotate(-45deg);
+}
