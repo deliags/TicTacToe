@@ -11,7 +11,7 @@
 body{
   margin: 0;
   font-family: 'Fredoka', var(--font-backup);
-  background-color: ;}
+}
 
 .header{
   display: flex;
