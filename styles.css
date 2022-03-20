@@ -11,6 +11,8 @@
 body{
   margin: 0;
   font-family: 'Fredoka', var(--font-backup);
+  background-color: #121116;
+  color: white;
 }
 
 .header{
@@ -18,6 +20,8 @@ body{
   flex-direction: column;
   place-content: center;
   place-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .player-title{
@@ -26,6 +30,7 @@ body{
   place-items: center;
   grid-template-columns: 1fr 1fr;
   position:relative;
+  margin-left: 3rem;
 }
 
 .board{
@@ -39,7 +44,7 @@ body{
   width: var(--cell-size);
   height: var(--cell-size);
   background-color: black;
-  border: 2px solid white;
+  border: 2px solid #121116;
   display: flex;
   place-content: center;
   place-items: center;
@@ -122,14 +127,16 @@ body{
   font-size: 3rem;
   background-color: white;
   border: 1px solid black;
+  border-radius: 10px;
   padding: .25em .5em;
+  margin-top: 2rem;
   cursor: pointer;
 }
 
 .game-result button:hover {
   background-color: black;
-  color: white;
-  border-color: white;
+  color: #e4072a;
+  border-color: rgb(228, 7, 42);
 }
 
 .game-result.show {
